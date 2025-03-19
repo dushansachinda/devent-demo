@@ -11,9 +11,9 @@
 
 serviceUrl = ""	# Type of STRING
 
-deploymentId = "gpt-4o"	# Type of STRING
+deploymentId = ""	# Type of STRING
 
 apiVersion = ""	# Type of STRING
 
-apiKey = "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"	# Type of STRING
+apiKey = ""	# Type of STRING
 
