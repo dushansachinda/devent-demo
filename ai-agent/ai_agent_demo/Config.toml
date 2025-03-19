@@ -1,0 +1,19 @@
+
+# Configuration file for "ai_agent_demo"
+# 
+# This file contains configuration values for configurable variables in your Ballerina code.
+# Both package-specific and imported module configurations are included below.
+# 
+# Learn more about configurable variables:
+# https://ballerina.io/learn/provide-values-to-configurable-variables/#provide-via-toml-syntax
+#
+# Note: This file is automatically added to .gitignore to protect sensitive information. 
+
+serviceUrl = ""	# Type of STRING
+
+deploymentId = "gpt-4o"	# Type of STRING
+
+apiVersion = ""	# Type of STRING
+
+apiKey = "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"	# Type of STRING
+

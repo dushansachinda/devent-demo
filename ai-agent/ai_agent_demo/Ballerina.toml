@@ -1,0 +1,4 @@
+[package]
+org = "dushan"
+name = "ai_agent_demo"
+version = "0.1.0"
