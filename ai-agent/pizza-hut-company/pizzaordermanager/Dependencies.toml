@@ -5,7 +5,7 @@
 
 [ballerina]
 dependencies-toml-version = "2"
-distribution-version = "2201.12.2"
+distribution-version = "2201.12.3-20250408-190500-402a9991"
 
 [[package]]
 org = "ballerina"
@@ -322,6 +322,33 @@ dependencies = [
 
 [[package]]
 org = "ballerinax"
+name = "ai"
+version = "1.0.1"
+dependencies = [
+	{org = "ballerina", name = "constraint"},
+	{org = "ballerina", name = "data.jsondata"},
+	{org = "ballerina", name = "file"},
+	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "io"},
+	{org = "ballerina", name = "jballerina.java"},
+	{org = "ballerina", name = "lang.regexp"},
+	{org = "ballerina", name = "log"},
+	{org = "ballerina", name = "mime"},
+	{org = "ballerina", name = "os"},
+	{org = "ballerina", name = "url"},
+	{org = "ballerina", name = "uuid"},
+	{org = "ballerina", name = "xmldata"},
+	{org = "ballerina", name = "yaml"},
+	{org = "ballerinax", name = "azure.openai.chat"},
+	{org = "ballerinax", name = "openai.chat"}
+]
+modules = [
+	{org = "ballerinax", packageName = "ai", moduleName = "ai"},
+	{org = "ballerinax", packageName = "ai", moduleName = "ai.mistral"}
+]
+
+[[package]]
+org = "ballerinax"
 name = "ai.agent"
 version = "0.9.2"
 dependencies = [
@@ -377,6 +404,7 @@ name = "pizzaordermanager"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
+	{org = "ballerinax", name = "ai"},
 	{org = "ballerinax", name = "ai.agent"}
 ]
 modules = [
