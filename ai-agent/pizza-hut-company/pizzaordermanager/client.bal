@@ -1,12 +1,12 @@
 import ballerina/http;
-import ballerinax/ai.agent;
+import ballerinax/ai;
 
 final http:Client pizzaClient = check new ("http://localhost:8080/v1");
 
 # Retrieves all available pizzas.
 #
 # + return - Array of pizzas or error
-@agent:Tool
+@ai:AgentTool
 @display {
     label: "",
     iconPath: ""
@@ -20,7 +20,7 @@ isolated function getPizzas() returns Pizza[]|error {
 #
 # + orderRequest - The order details
 # + return - Created order or error
-@agent:Tool
+@ai:AgentTool
 @display {
     label: "",
     iconPath: ""
@@ -34,7 +34,7 @@ isolated function createOrder(OrderRequest orderRequest) returns Order|error {
 #
 # + customerId - Optional customer ID to filter orders
 # + return - Array of orders or error
-@agent:Tool
+@ai:AgentTool
 @display {
     label: "",
     iconPath: ""
@@ -53,7 +53,7 @@ isolated function getOrders(string? customerId = ()) returns Order[]|error {
 #
 # + orderId - ID of the order to retrieve
 # + return - Order details or error
-@agent:Tool
+@ai:AgentTool
 @display {
     label: "",
     iconPath: ""
@@ -68,7 +68,7 @@ isolated function getOrder(string orderId) returns Order|error {
 # + orderId - ID of the order to update
 # + orderRequest - New status for the order
 # + return - Updated order or error
-@agent:Tool
+@ai:AgentTool
 @display {
     label: "",
     iconPath: ""

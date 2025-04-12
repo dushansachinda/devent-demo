@@ -1,5 +1,5 @@
 import ballerina/http;
-import ballerinax/ai.agent;
+import ballerinax/ai;
 
 // Sample pizza data with more varieties
 final readonly & Pizza[] pizzas = [
@@ -134,10 +134,10 @@ service /v1 on new http:Listener(8080) {
 
 //listener agent:Listener pizzaorderagentListener = new (listenOn = check http:getDefaultListener());
 //listener agent:Listener PizzaAiAgentListener = new (listenOn = check http:getDefaultListener());
-listener agent:Listener PizzaAiAgentListener = new (listenOn = check http:getDefaultListener());
+listener ai:Listener PizzaAiAgentListener = new (listenOn = check http:getDefaultListener());
 
 service /PizzaAiAgent on PizzaAiAgentListener {
-    resource function post chat(@http:Payload agent:ChatReqMessage request) returns agent:ChatRespMessage|error {
+    resource function post chat(@http:Payload ai:ChatReqMessage request) returns ai:ChatRespMessage|error {
         string stringResult = check _pizzaAiAgentagentAgent->run(request.message);
         return {message: stringResult};
     }
