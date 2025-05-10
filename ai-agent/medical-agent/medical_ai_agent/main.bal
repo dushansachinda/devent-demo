@@ -8,7 +8,7 @@ service /healthcare on new http:Listener(8290) {
 
         // Call PineValley backend
         PineValleyRequest payload = {doctorType: doctorType};
-        log:printInfo("PineValley request:", res = payload.toString());
+        log:printInfo("PineValley request:", res = payload.toString(), ep = pineValleyUrl);
         PineValleyResponse pineValleyResponse = check pineValleyEp->post("/doctors", message = payload);
         log:printInfo("PineValley response:", res = pineValleyResponse.toString());
         doctors.push(...pineValleyResponse.doctors);
